@@ -1,3 +1,8 @@
-const { Sequelize } = require('sequelize');
+import Sequelize from 'sequelize';
 
-const sequelize = new Sequelize('postgres://user:pass@example.com:5432/dbname')
+const db = new Sequelize('postgres', 'postgres', 'sundae', {
+    host: 'localhost',
+    dialect: 'postgres'
+});
+
+export default db;
