@@ -6,7 +6,12 @@ async function getAllUsers() {
 }
 
 async function addUser(firstName, lastName) {
-    return 'Derp'
+    let newUser = await User.create({
+        firstname: firstName,
+        lastname: lastName
+    })
+
+    return newUser;
 }
 
-export default { getAllUsers };
+export default { getAllUsers, addUser };
