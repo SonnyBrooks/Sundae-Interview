@@ -1,39 +1,41 @@
-export default(sequelize, DataTypes) => {
-    return sequelize.define(
-        "Property",
-        {
-            id: {
-                type: DataTypes.INTEGER,
-                allowNull: false,
-                primaryKey: true,
-                autoIncrement: true
-            },
-            propertyName: {
-                type: DataTypes.STRING(256),
-                allowNull: false
-            },
-            address: {
-                type: DataTypes.STRING(256),
-                allowNull: false
-            },
-            city: {
-                type: DataTypes.STRING(256),
-                allowNull: false
-            },
-            stateCode: {
-                type: DataTypes.STRING(2),
-                allowNull: false
-            },
-            zipCode: {
-                type: DataTypes.STRING(10),
-                allowNull: false
-            }
+import Sequelize from 'sequelize';
+import db from '../../../sequelize'
+
+const Property = db.define(
+    "Property",
+    {
+        property_id: {
+            type: Sequelize.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true
         },
-        {
-            tableName: 'property',
-            timestamps: false,
-            freezeTableName: true,
+        property_name: {
+            type: Sequelize.STRING(256),
+            allowNull: false
+        },
+        address: {
+            type: Sequelize.STRING(256),
+            allowNull: false
+        },
+        city: {
+            type: Sequelize.STRING(256),
+            allowNull: false
+        },
+        state_code: {
+            type: Sequelize.STRING(2),
+            allowNull: false
+        },
+        zip_code: {
+            type: Sequelize.STRING(10),
+            allowNull: false
         }
-    )
-    
-}
+    },
+    {
+        tableName: 'property',
+        timestamps: false,
+        freezeTableName: true,
+    }
+);
+
+export default Property;

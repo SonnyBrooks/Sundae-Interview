@@ -1,29 +1,33 @@
 import Sequelize from 'sequelize';
 import db from '../../../sequelize'
 
-const User = db.define(
-    "User",
+const Account = db.define(
+    "Account",
     {
-        id: {
+        account_id: {
             type: Sequelize.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true
         },
-        firstname: {
+        first_name: {
             type: Sequelize.STRING(256),
             allowNull: false
         },
-        lastname: {
+        last_name: {
             type: Sequelize.STRING(256),
             allowNull: false
+        },
+        email: {
+            type: Sequelize.STRING(256),
+            allowNull: true
         }
     },
     {
-        tableName: 'users',
+        tableName: 'account',
         timestamps: false,
         freezeTableName: true,
     }
 );
 
-export default User;
+export default Account;
