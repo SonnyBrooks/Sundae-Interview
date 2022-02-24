@@ -6,7 +6,12 @@ This is a small API that can add simple user accounts and properties. There was 
 
 # Usage
 `npm install`
+
 `docker-compose up`
+
+Run the consumer in another terminal window using `node ./consumer/index.js`
+
+Use any of your favorite DB tools to connect to the DB using the creds `username: postgres, password:sundae`
 
 Explore the app to find the available routes. You can add an account by using this endpoint - `localhost:3000/account` with the body 
 ``` JSON
@@ -49,3 +54,7 @@ infrastructure.
 - You will have the freedom to ask questions and look up documentation as you need to,
 so don’t feel pressured to memorize every little set-up detail for your application or any
 libraries.
+
+# First Interview
+* Convert Roman Numeral to Integer - https://medium.com/swlh/how-to-build-a-roman-numeral-to-integer-function-in-javascript-8298657a26f7
+* Verify Bracket Pairs - https://levelup.gitconnected.com/solving-balanced-brackets-in-javascript-with-stacks-edbc52a57309
