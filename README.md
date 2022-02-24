@@ -2,6 +2,22 @@
 This is the base of a project that I was asked to prepare for an interview at Sundae. https://sundae.com/
 
 # Description
+This is a small API that can add simple user accounts and properties. There was a requirement for Kafka, so I had it queue messages to trigger a welcome email.
+
+# Usage
+`npm install`
+`docker-compose up`
+
+Explore the app to find the available routes. You can add an account by using this endpoint - `localhost:3000/account` with the body 
+``` JSON
+{
+    "firstName": "Remmy",
+    "lastName": "Bucksaplenty",
+    "email": "remmy@money.com"
+}
+```
+
+# Requirements from Sundae
 What to expect:
 For the 2 hour live code session, you will be creating a small Node.js application that integrates
 database reading/writing, produces/consumes Kafka messages, and pulls data from external
